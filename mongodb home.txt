@@ -1,0 +1,44 @@
+// Insert a single document
+db.products.insertOne({
+  name: "Laptop",
+  price: 1200,
+  category: "Electronics"
+});
+
+// Insert multiple documents
+db.products.insertMany([
+  { name: "Mouse", price: 25, category: "Electronics" },
+  { name: "Keyboard", price: 45, category: "Electronics" },
+  { name: "Monitor", price: 150, category: "Electronics" }
+]);
+
+db.products.find();
+
+
+db.products.find().pretty();
+
+db.products.find({ category: "Electronics" });
+
+db.products.find({ price: { $gt: 100 } });
+
+
+db.products.find({}, { _id: 0, name: 1, price: 1 });
+
+db.products.updateOne(
+  { name: "Mouse" },
+  { $set: { price: 30 } }
+);
+
+
+db.products.updateMany(
+  { category: "Stationery" },
+  { $set: { price: 10 } }
+);
+
+db.products.deleteMany({ category: "Stationery" });
+
+db.products.deleteMany({});
+
+
+new column
+new mesure
