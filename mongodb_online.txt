@@ -11,3 +11,4 @@ db.score.deleteOne({'city':'hyd'})
 db.score.deleteMany({'gpa':8.9})
 show collections
 show databases
+db.college_student.drop()
