@@ -9,3 +9,4 @@ db.score.find({'gpa':{$gt:8.5},'city':'hyd'})
 db.score.countDocuments()
 db.score.deleteOne({'city':'hyd'})
 db.score.deleteMany({'gpa':8.9})
+show collections
