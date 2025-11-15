@@ -6,4 +6,4 @@ db.score.insertMany([{'name':'sai','gpa':7.5},{'name':'manju','city':'Bellary'},
 db.score.updateOne({'name':'manju'},{$set:{'gpa':8.5}})
 db.score.updateMany({'gpa':8.5},{$set:{'gpa':8.9}})
 db.score.find({'gpa':{$gt:8.5},'city':'hyd'})
-
+db.score.countDocuments()
