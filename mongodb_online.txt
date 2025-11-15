@@ -1,0 +1,7 @@
+use college_student
+db.createCollection("score")
+db.score.insertOne({'name':'ameen','gpa':8.9,'city':'hyd'})
+db.score.find()
+db.score.insertMany([{'name':'sai','gpa':7.5},{'name':'manju','city':'Bellary'},{'name':'kalai','gpa':8.5}])
+db.score.updateOne({'name':'manju'},{$set:{'gpa':8.5}})
+db.score.updateMany({'gpa':8.5},{$set:{'gpa':8.9}})
